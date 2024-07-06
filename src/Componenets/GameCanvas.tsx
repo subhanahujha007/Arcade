@@ -145,8 +145,10 @@ const updateBallPositions = () => {
             const normalX = dx / distance;
             const normalY = dy / distance;
             const dotProduct = vx * normalX + vy * normalY;
-            vx = vx - 2 * dotProduct * normalX;
-            vy = vy - 2 * dotProduct * normalY;
+            //change in pace after collision
+            vx = vx - 10 * dotProduct * normalX;
+            vy = vy - 10 * dotProduct * normalY;
+            //orange ball sliding to the edge of white ball
             x += normalX * (BALL_RADIUS + ORANGE_BALL_RADIUS - distance);
             y += normalY * (BALL_RADIUS + ORANGE_BALL_RADIUS - distance);
           }
