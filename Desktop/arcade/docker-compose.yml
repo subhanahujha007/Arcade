@@ -1,8 +1,0 @@
-version: '3.8'
-services:
-  arcadegame:
-    build: "."
-    image: "subhanshujha007/arcade:arcade_game"
-    container_name: arcade
-    ports:
-      - "3000:3000"
