@@ -145,8 +145,8 @@ const updateBallPositions = () => {
             const normalX = dx / distance;
             const normalY = dy / distance;
             const dotProduct = vx * normalX + vy * normalY;
-            vx = vx - 2 * dotProduct * normalX;
-            vy = vy - 2 * dotProduct * normalY;
+            vx = vx - 20 * dotProduct * normalX;
+            vy = vy - 20 * dotProduct * normalY;
             x += normalX * (BALL_RADIUS + ORANGE_BALL_RADIUS - distance);
             y += normalY * (BALL_RADIUS + ORANGE_BALL_RADIUS - distance);
           }
